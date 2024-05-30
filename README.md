@@ -341,7 +341,7 @@ See the <a href="https://github.com/eli64s/readme-ai?tab=readme-ov-file#%EF%B8%8
 
   - Python 3.9+
   - Package manager/Container: `pip`, `pipx`, `docker`
-  - LLM service: `OpenAI`, `Ollama`, `Google Gemini`, `Offline Mode`
+  - LLM service: `OpenAI`, `Ollama`, `Google Gemini`, `Keywords AI`, `Offline Mode`
 
 **Repository URL or Local Path:**
 
@@ -357,6 +357,7 @@ Make sure to have a repository URL or local directory path ready for the CLI.
 - [**OpenAI**](https://platform.openai.com/docs/quickstart/account-setup): Recommended, requires an account setup and API key.
 - [**Ollama**](https://github.com/ollama/ollama): Free and open-source, potentially slower and more resource-intensive.
 - [**Google Gemini**](https://ai.google.dev/tutorials/python_quickstart): Requires a Google Cloud account and API key.
+- [**Keywords AI**](https://docs.keywordsai.co/get-started/quick-start): Call 150+ LLMs with one API key.
 - [**Offline Mode**](https://github.com/eli64s/readme-ai/blob/main/examples/markdown/readme-offline.md): Generates a boilerplate README without making API calls.
 
 <!--
@@ -474,6 +475,13 @@ An OpenAI API account and API key are needed to use readme-ai. Get started by cr
 > $ export GOOGLE_API_KEY=<your_api_key>
 > ```
 
+#### Using `Keywords AI`
+
+> Set your Keywords AI API using the OpenAI format.
+> ```console
+> $ export OPENAI_API_KEY=<Your_Keywords_AI_API_Key>
+> ```
+
 **Run the CLI**
 
 #### Using `pip`
@@ -486,6 +494,9 @@ An OpenAI API account and API key are needed to use readme-ai. Get started by cr
 >
 > # Using Ollama local model
 > readmeai --repository https://github.com/eli64s/readme-ai --api ollama --model mistral
+>
+> # Using Keywords AI
+> readmeai --repository https://github.com/eli64s/readme-ai --model gpt-4o --base-url "https://api.keywordsai.co/api/chat/completions"
 > ```
 
 #### Using `docker`
